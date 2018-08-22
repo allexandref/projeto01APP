@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/excluir"
+    tools:context=".ConsultarActivity">
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Id"
+        android:ems="10"
+        android:hint="Id"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/bt_consultar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consultar" />
+
+    <EditText
+        android:id="@+id/id_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Nome"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/id_sobrenome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/bt_alterar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atualizar" />
+
+    <Button
+        android:id="@+id/bt_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar" />
+
+</LinearLayout>
