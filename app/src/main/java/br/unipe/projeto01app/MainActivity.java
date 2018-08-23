@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         buttonCadastrar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CadastroActivity.class));
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
                 startActivity(intent);
             }
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         buttonListar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ListarActivity.class));
                 Intent intent = new Intent(MainActivity.this, ListarActivity.class);
                 startActivity(intent);
             }
@@ -54,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         buttonExcluir.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ExcluirActivity.class));
                 Intent intent = new Intent(MainActivity.this, ExcluirActivity.class);
                 startActivity(intent);
             }
@@ -63,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         buttonConsultar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ConsultarActivity.class));
                 Intent intent = new Intent(MainActivity.this, ConsultarActivity.class);
                 startActivity(intent);
             }
