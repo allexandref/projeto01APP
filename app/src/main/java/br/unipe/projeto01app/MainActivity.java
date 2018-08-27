@@ -33,13 +33,16 @@ public class MainActivity extends AppCompatActivity {
         buttonExcluir = (Button) findViewById(R.id.bt_menu_excluir);
         buttonConsultar = (Button) findViewById(R.id.bt_menu_consultar);
 
-        buttonCadastrar.setOnClickListener(new View.OnClickListener(){
+
+        View.OnClickListener listenerCadastrar = new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
                 startActivity(intent);
             }
-        });
+        };
+
+        buttonCadastrar.setOnClickListener(listenerCadastrar);
 
         buttonListar.setOnClickListener(new View.OnClickListener(){
             @Override
