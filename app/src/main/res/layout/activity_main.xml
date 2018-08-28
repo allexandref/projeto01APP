@@ -7,27 +7,14 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_menu_cadastrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar" />
 
-    <Button
-        android:id="@+id/bt_menu_listar"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listar" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <Button
-        android:id="@+id/bt_menu_excluir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Excluir" />
-
-    <Button
-        android:id="@+id/bt_menu_consultar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Consultar" />
 </LinearLayout>

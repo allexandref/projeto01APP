@@ -3,7 +3,10 @@ package br.unipe.projeto01app;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,54 +21,56 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonCadastrar;
-    private Button buttonListar;
-    private Button buttonExcluir;
-    private Button buttonConsultar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonCadastrar = (Button) findViewById(R.id.bt_menu_cadastrar);
-        buttonListar = (Button) findViewById(R.id.bt_menu_listar);
-        buttonExcluir = (Button) findViewById(R.id.bt_menu_excluir);
-        buttonConsultar = (Button) findViewById(R.id.bt_menu_consultar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
 
+    /**
+     * @objetivo Carregar o menu na Activity
+     *
+     * @param menu
+     * @return boolean
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
 
-        View.OnClickListener listenerCadastrar = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
-                startActivity(intent);
-            }
-        };
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.menu_cadastrar: cadastrar(); break;
+            case R.id.menu_listar: listar(); break;
+            case R.id.menu_excluir: excluir(); break;
+            case R.id.menu_consultar: consultar(); break;
+                default: return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
 
-        buttonCadastrar.setOnClickListener(listenerCadastrar);
+    public void cadastrar(){
+        Intent intent = new Intent(MainActivity.this, CadastroActivity.class);
+        startActivity(intent);
+    }
 
-        buttonListar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ListarActivity.class);
-                startActivity(intent);
-            }
-        });
+    public void listar(){
+        Intent intent = new Intent(MainActivity.this, ListarActivity.class);
+        startActivity(intent);
+    }
 
-        buttonExcluir.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ExcluirActivity.class);
-                startActivity(intent);
-            }
-        });
+    public void excluir(){
+        Intent intent = new Intent(MainActivity.this, ExcluirActivity.class);
+        startActivity(intent);
+    }
 
-        buttonConsultar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ConsultarActivity.class);
-                startActivity(intent);
-            }
-        });
+    public void consultar(){
+        Intent intent = new Intent(MainActivity.this, ConsultarActivity.class);
+        startActivity(intent);
     }
 }

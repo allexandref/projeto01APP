@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:title="@string/cadastrar"
+          android:id="@+id/menu_cadastrar"
+          app:showAsAction="never"/>
+
+    <item android:title="@string/listar"
+        android:id="@+id/menu_listar"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/excluir"
+        android:id="@+id/menu_excluir"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/consultar"
+        android:id="@+id/menu_consultar"
+        app:showAsAction="never"/>
+</menu>

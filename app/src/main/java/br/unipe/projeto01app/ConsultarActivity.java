@@ -32,12 +32,12 @@ public class ConsultarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.consultar);
 
-        id              = (EditText) findViewById(R.id.id);
-        buttonConsultar = (Button) findViewById(R.id.bt_consultar);
-        buttonVoltar    = (Button) findViewById(R.id.bt_voltar);
-        nome            = (EditText) findViewById(R.id.id_nome);
-        sobrenome       = (EditText) findViewById(R.id.id_sobrenome);
-        buttonAlterar   = (Button) findViewById(R.id.bt_alterar);
+        id              = (EditText)findViewById(R.id.id);
+        buttonConsultar = (Button)  findViewById(R.id.bt_consultar);
+        buttonVoltar    = (Button)  findViewById(R.id.bt_voltar);
+        nome            = (EditText)findViewById(R.id.id_nome);
+        sobrenome       = (EditText)findViewById(R.id.id_sobrenome);
+        buttonAlterar   = (Button)  findViewById(R.id.bt_alterar);
 
         buttonConsultar.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -65,7 +65,6 @@ public class ConsultarActivity extends AppCompatActivity {
         buttonVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ConsultarActivity.this, MainActivity.class));
                 Intent intent = new Intent(ConsultarActivity.this, MainActivity.class);
                 startActivity(intent);
             }

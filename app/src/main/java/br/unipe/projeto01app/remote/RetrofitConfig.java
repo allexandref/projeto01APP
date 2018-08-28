@@ -19,7 +19,7 @@ public class RetrofitConfig {
         client.addInterceptor(interceptor);
 
         this.retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.60.0.47:8080/api/v1.0/")
+                .baseUrl("http://10.0.2.2:8080/api/v1.0/")
                 .client(client.build())
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();

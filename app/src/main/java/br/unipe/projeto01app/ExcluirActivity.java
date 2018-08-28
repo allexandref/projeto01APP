@@ -54,7 +54,6 @@ public class ExcluirActivity extends AppCompatActivity {
         buttonVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ExcluirActivity.this, MainActivity.class));
                 Intent intent = new Intent(ExcluirActivity.this, MainActivity.class);
                 startActivity(intent);
             }

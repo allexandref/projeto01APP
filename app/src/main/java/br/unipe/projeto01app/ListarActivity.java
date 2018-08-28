@@ -48,13 +48,5 @@ public class ListarActivity extends AppCompatActivity {
             }
         });
 
-//        buttonVoltar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(ListarActivity.this, MainActivity.class));
-//                Intent intent = new Intent(ListarActivity.this, MainActivity.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 }
