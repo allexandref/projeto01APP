@@ -63,7 +63,6 @@ public class CadastroActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CadastroActivity.this, MainActivity.class));
                 Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
                 startActivity(intent);
             }
